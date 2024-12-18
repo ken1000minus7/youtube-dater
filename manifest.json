@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Dater",
+  "version": "1.0",
+  "permissions": [
+    "https://www.googleapis.com/*"
+  ],
+  "host_permissions": ["https://www.youtube.com/*", "https://www.googleapis.com/"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://www.googleapis.com/"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
